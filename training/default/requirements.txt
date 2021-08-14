@@ -1,0 +1,3 @@
+selectolax
+pystemmer
+boto3
