@@ -28,13 +28,9 @@ class ExtractJob(Job):
     def custom(self, parsed_args):
         # see /tests/integration.py for examples
         # self.client - Intstream client
-        text = """0800fc577294c34e0b28ad2839435945
-                b1bb0b49069db3871451654efb038e9674ca2595d665c9fc6b5c65e54c5f76cb
-                2346ad27d7568ba9896f1b7da6b5991251debdf2
-                testing@test.com
-                http://testing.com
-                1.1.1.1
-                2607:f0d0:1002:0051:0000:0000:0000:0004"""
+        SOURCE = 158
+        text = """Random indicators for demo
+                """
             #demo upload indicators
 
         random_ipv4 = str(random.randint(1,255)) + "." \
@@ -61,7 +57,7 @@ class ExtractJob(Job):
         # reset to start of file
         # demo upload html article
         resource_raw = resource.RawArticle(self.client, method=resource.Resource.POST)
-        resource_raw.article_post(title="article test", source_id=1, text=text)
+        resource_raw.article_post(title="article test", source_id=SOURCE, text=text)
         response_raw = resource_raw.full_request()
 
         indicators_ids = []

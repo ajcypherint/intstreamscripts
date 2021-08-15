@@ -1,3 +1,4 @@
 *.swp
+.idea/
 *.tar.gz
 *.pyc
