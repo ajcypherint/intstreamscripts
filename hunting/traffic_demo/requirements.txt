@@ -1,1 +1,1 @@
-intstreamsdk==1.0.17
+intstreamsdk==1.0.19

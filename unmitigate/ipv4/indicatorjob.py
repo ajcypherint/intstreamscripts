@@ -4,11 +4,11 @@ from intstreamsdk import resource
 from intstreamsdk import mitigate
 
 
-class IPV4UnMitigateJob(mitigate.MitigateJob):
+class IPV4UnMitigateJob(mitigate.UnMitigateJob):
     def __init__(self, client_class):
         super(IPV4UnMitigateJob, self).__init__(client_class, mitigate.RESOURCE_IPV4)
 
-    def do_mitigate(self, indicator):
+    def do_unmitigate(self, indicator):
         """
         your code goes here
         :param indicator:
